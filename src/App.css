@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.timer-wrap {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  /* background-color: #fff */
+  border-radius: 8px;
+}
+
+.timer {
+  background: linear-gradient(-135deg, #0048ce, #008bfd);
+  width: 400px;
+  height: 50px;
+  padding: 40px 0;
+  font-family: "Roboto mono", monospace;
+  color: #ffffff;
+  font-size: 35px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 6rem;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.timer-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.timer-button-stop {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer-history {
+  max-width: 300px;
+}
+
+.timer-history h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timer-history div {
+  margin-bottom: 5px;
+}
+.timer-button[disabled] {
+  background-color: gray;
+  color: white;
 }
